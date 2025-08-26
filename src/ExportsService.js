@@ -24,7 +24,7 @@ class ExportsService {
         FROM songs s
         JOIN playlist_songs ps ON ps.song_id = s.id
         WHERE ps.playlist_id = $1
-        ORDER BY ps.created_at ASC, s.title ASC
+        ORDER BY s.title ASC
       `,
       values: [playlistId],
     };

@@ -10,6 +10,7 @@ class MailSender {
         pass: process.env.SMTP_PASSWORD,
       },
     });
+    this._from = process.env.SMTP_USER;
   }
 
   async sendExportEmail(to, playlistId, exportJson) {
